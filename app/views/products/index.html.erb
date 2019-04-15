@@ -1,0 +1,13 @@
+<h1>Welcome to your Homepage!</h1>
+<h2>Your Current Cart:</h2>
+<ol>
+    <% cart.each do |c|%>
+        <li><%=c%></li>
+    <%end%>
+</ol>
+
+<%= form_tag("/", method: "post") do%>
+<%= label_tag(:product, "Enter Your Product")%>
+<%= text_field_tag(:product)%>
+<%= submit_tag("add to cart") %>
+<%end%>
